@@ -1,0 +1,534 @@
+/*!
+Theme Name: Paraglide NorthAmerica
+Theme URI: http://underscores.me/
+Author: Paraglide NorthAmerica
+Author URI: http://www.paraglidenorthamerica.com
+Description: A theme for Paraglide NorthAmerica
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: paraglidenorthamerica
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Paraglide NorthAmerica is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+
+
+
+@import '_bootstrap.scss';
+
+h3 {
+        color: $main-color;
+        font-weight: 700;
+        font-size: 2.5714285714em;
+        text-transform: uppercase;
+        margin: 24px 0;
+        letter-spacing: 2px;
+    }
+
+h4 {
+    color: $main-color;
+    font-family: $main-font;
+    font-size: 2em;
+}
+
+.main-cta {
+    display: inline-block;
+    background-color: $main-color;
+    color: white;
+    font-family: $main-font;
+    width: 400px;
+    text-align: center;
+    font-size: 1.7142857143em;
+    padding: 24px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+/* 
+style.scss
+function.php
+header.php
+footer.php
+_menus.scss
+ */
+//MIXIN
+@mixin transition($ease){
+    -webkit-transition: $ease;
+     -moz-transition: $ease;
+      -ms-transition: $ease;
+          transition: $ease;
+}
+// PNA LOGO
+.pna_logo{
+    z-index: 100;
+    position: fixed;
+    left:20%;
+    margin-top:15px;
+    @include transition(0.5s ease);
+}
+.active5{margin-top:0 !important;}
+.is-active2{opacity: 0.5;}
+// Navigation
+.nav-toggle{
+    z-index: 1001;
+    font-size: 3em;
+    color:white;
+    position: fixed;
+    right:1em;
+    top:15px;
+    cursor:pointer;
+    @include transition(0.5s ease);
+}
+.active3{right:0.5em !important;top:5px !important;}
+.active{
+    padding-bottom:100px !important;
+    background-color:transparentize(black,0.2);
+}
+.is-active{
+    margin-top:0px !important;
+    padding-bottom: 0 !important;
+    @include transition(0.5s ease);
+    z-index: 101 !important;
+}
+.main-navigation{
+    position: fixed;
+    border-bottom: white 1px solid;
+    line-height: 60px;
+    width:100%;
+    z-index: 100;
+    margin-top:-460px;
+    padding-bottom:120px; 
+    @include transition(0.2s);
+    .menu-primary-container{
+        #primary-menu{
+            li{
+                a{
+                    text-decoration: none;
+                    background:url('../paraglidenorthamerica/images/bg_bg2.png') repeat-y;
+                    background-size:100%;
+                    background-position:-1000px 0;
+                    border-radius: 0px !important;
+                    text-align: center;
+                    color:white;
+                    @include transition(0.5s ease);
+                    &:hover{background-position: 0;background-color:transparentize(black,0.5);}
+                }
+            }
+        }
+    }   
+}
+.sub-menu{
+    background-color:transparentize(black,0.2);
+    a{
+        display:block;width:100% !important;
+    }
+}
+/* MEDIA Q */
+@media screen and (min-width : 990px) {
+    .pna_logo{opacity:1;z-index: 1000;}
+    .nav-toggle{display:none;position: absolute;}
+    .active{
+        line-height:60px !important;
+        height:61px !important;
+        padding:0 !important;
+        background-color:transparentize(black,0.2);
+    }
+    .sub-menu.active2{margin-top:39px !important;}
+    .is-active{margin-top:0;}
+    .main-navigation{
+        height:101px;
+        line-height: 100px;
+        margin-top:0px;
+        padding:0;
+        .menu-primary-container{
+            width:960px;
+            margin:0 auto;
+            ul{
+                display:inline-block;
+                float:right;
+                li{
+                    float:left;
+                    a{
+                        width:100px;
+                        padding-top:0;
+                        padding-bottom: 0;
+                    }
+                }
+                ul{
+                    position: absolute;
+                    float:left;
+                }
+            }
+        }
+    }
+    .sub-menu{
+        margin-top:79px !important;
+        a{display:block; width:100px !important}
+    }
+}
+
+
+
+// header
+
+header {
+    position: relative;
+    overflow: hidden;
+
+    .primary-menu {
+            .main-nav {
+            padding: 0;
+            margin: 0;
+            text-align: right;
+            background-color: transparentize(black, 0.2);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 99;
+
+            li {
+                display: inline;
+                a {
+                    display: inline-block;
+                    font-family: $main-font;
+                    font-size: 1.2857142857em;
+                    padding: 24px 30px;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    video {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+
+    .video-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: transparentize(black, 0.4);
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-align: center;
+
+        .site-title  {
+            a {
+                font-size: 2.5714285714em;
+                font-family: $main-font;
+                color: transparentize(white, 0.4);
+                letter-spacing: 15px;
+                font-weight: 700;
+                line-height: 1.5;
+                transition: all 250ms ease-in-out;
+                text-decoration: none;
+
+                &:hover {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .icon-pulldown {
+            display: block;
+            margin-top: 70px;
+
+            i {
+                display: block;
+                font-size: 5.7142857143em;
+                color: white;
+            }
+        }
+    }
+}
+
+// about us
+
+.about-us {
+
+    p {
+        font-weight: 300;
+        color: $paragraph-color;
+        width: 400px;
+        margin-right: auto;
+        margin-bottom: 24px;
+    }
+
+}
+
+.about-us-content {
+    height: 600px;
+
+    &:nth-child(2) {
+        padding-left: 48px;
+    }
+}
+
+
+
+// events-info
+.events-info {
+    background-image: url(../images/mountain-1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .feed-plugin {
+        background-color: transparentize(black, 0.3);
+        padding: 24px;
+        text-align: center;
+    }
+}
+
+// pilot-service
+
+.pilot-service {
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .lead {
+        font-family: $main-font;
+        font-weight: 300;
+        font-size: 2.4285714286em;
+        color: white;
+    }
+
+    em {
+        font-size: 2.4285714286em;
+        font-weight: 700;
+        font-family: $main-font;
+        color: white;
+        font-style: normal;
+    }
+}
+
+//brands
+
+.brand-list {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    li {
+        display: inline;
+        list-style: none;
+
+        a {
+            display: inline-block;
+            padding: 0 25px;
+
+            img {
+                display: inline-block !important;
+            }
+        }
+    }
+}
+
+// latest videos
+
+.latest-videos {
+    text-align: center;
+    h3 {
+        text-align: center;
+    }
+
+    iframe {
+        margin: 64px auto;
+    }
+}
+
+//about-owner
+
+
+.about-owner {
+    p {
+        font-weight: 300;
+        margin-bottom: 48px;
+    }
+}
+
+// contact us 
+.contact-us {
+    text-align: center;
+    
+
+    .lead {
+        font-size: 2.5714285714em;
+        font-family: $main-font;
+        color: white;
+        line-height: 1.5;
+        font-weight: 300;
+        width: 600px;
+        margin: 0 auto;
+        margin-bottom: 64px;
+    }
+}
+
+// footer
+footer {
+    text-align: center;
+    padding: 24px 0;
+
+    .footer-lead {
+        font-size: 1.7142857143em;
+        font-weight: 700;
+        font-family: $main-font;
+        color: $paragraph-color;
+        text-transform: uppercase;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
