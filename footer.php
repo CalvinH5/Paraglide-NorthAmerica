@@ -15,8 +15,8 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'paraglidenorthamerica' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'paraglidenorthamerica' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
+			<!-- <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'paraglidenorthamerica' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'paraglidenorthamerica' ), 'WordPress' ); ?></a> -->
+			<span class="sep"><?php echo get_theme_mod('copyright_details');?> | </span>
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'paraglidenorthamerica' ), 'paraglidenorthamerica', '<a href="http://www.paraglidenorthamerica.com" rel="designer">Paraglide NorthAmerica</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

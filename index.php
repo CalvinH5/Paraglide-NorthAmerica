@@ -46,7 +46,7 @@ get_header(); ?>
 
                         <p><?php echo get_theme_mod('about_us_content'); ?></p>
 
-                        <a class="main-cta" href="#"><?php echo get_theme_mod('about_tom_btn_title'); ?></a>
+                        <a class="main-cta" href="<?php echo get_theme_mod('about_us_btn'); ?>"><?php echo get_theme_mod('about_us_btn_title'); ?></a>
                     </div>
                     <!-- /.col-md-6 -->
 
@@ -63,6 +63,11 @@ get_header(); ?>
                     <div class="col-md-3">
                         <div class="feed-plugin">
                             <h4>Follow Us</h4>
+                            <div class="inside-social">
+                                <?php echo do_shortcode("[custom-facebook-feed]");?>
+                            </div>
+                            <!-- /.inside-social -->
+                            
                         </div>
                         <!-- /.feed-plugin -->
                     </div> 
@@ -114,12 +119,12 @@ get_header(); ?>
         <section class="brands">
             <div class="container">
                 <ul class="brand-list">
-                    <li><a href="#"><img src="<?php echo get_theme_mod('shop_image1'); ?>" alt="" width="100"></a></li>
-                    <li><a href="#"><img src="<?php echo get_theme_mod('shop_image2') ?>" alt="" width ="100"></a></li>
-                    <li><a href="#"><img src="<?php echo get_theme_mod('shop_image3') ?>" alt="" width="100"></a></li>
-                    <li><a href="#"><img src="<?php echo get_theme_mod('shop_image4') ?>" alt="" width="100"></a></li>
-                    <li><a href="#"><img src="<?php echo get_theme_mod('shop_image5') ?>" alt="" width="100"></a></li>
-                    <li><a href="#"><img src="<?php echo get_theme_mod('shop_image6') ?>" alt="" width="100"></a></li>
+                    <li><a href="<?php echo get_theme_mod('brand_link1') ?>"><img src="<?php echo get_theme_mod('shop_image1') ?>" alt="<?php echo get_theme_mod('shop_image_alt1') ?>" width="100"></a></li>
+                    <li><a href="<?php echo get_theme_mod('brand_link2') ?>"><img src="<?php echo get_theme_mod('shop_image2') ?>" alt="<?php echo get_theme_mod('shop_image_alt2') ?>" width="100"></a></li>
+                    <li><a href="<?php echo get_theme_mod('brand_link3') ?>"><img src="<?php echo get_theme_mod('shop_image3') ?>" alt="<?php echo get_theme_mod('shop_image_alt3') ?>" width="100"></a></li>
+                    <li><a href="<?php echo get_theme_mod('brand_link4') ?>"><img src="<?php echo get_theme_mod('shop_image4') ?>" alt="<?php echo get_theme_mod('shop_image_alt4') ?>" width="100"></a></li>
+                    <li><a href="<?php echo get_theme_mod('brand_link5') ?>"><img src="<?php echo get_theme_mod('shop_image5') ?>" alt="<?php echo get_theme_mod('shop_image_alt5') ?>" width="100"></a></li>
+                    <li><a href="<?php echo get_theme_mod('brand_link6') ?>"><img src="<?php echo get_theme_mod('shop_image6') ?>" alt="<?php echo get_theme_mod('shop_image_alt6') ?>" width="100"></a></li>
                 </ul>
                 <!-- /.brand-list -->
             </div>
@@ -130,10 +135,10 @@ get_header(); ?>
         <section class="latest-videos">
             <div class="container">
                 <h3><?php echo get_theme_mod('latest_videos_title'); ?></h3>
-
-                <iframe width="650" height="410"
+                <?php echo do_shortcode("[huge_it_videogallery id='1']"); ?>
+                <!-- <iframe width="650" height="410"
                 src="http://www.youtube.com/embed/QGfJdzNNHgY?autoplay=0">
-                </iframe>
+                </iframe> -->
             </div>
             <!-- /.container -->
         </section>
@@ -150,7 +155,7 @@ get_header(); ?>
 
                     <p><?php echo get_theme_mod('about_tom_content'); ?></p>
 
-                    <a href="" class="main-cta"><?php echo get_theme_mod('about_tom_btn_title'); ?></a>
+                    <a href="<?php echo get_theme_mod('about_tom_btn'); ?>" class="main-cta"><?php echo get_theme_mod('about_tom_btn_title'); ?></a>
                 </div>
                 <!-- /.col-md-6 -->
             </div>
@@ -163,7 +168,7 @@ get_header(); ?>
                 <h3><?php echo get_theme_mod('contact_title'); ?></h3>
 
                 <p class="lead"><?php echo get_theme_mod('contact_content'); ?></p>
-                <a href="#" class="main-cta"><?php echo get_theme_mod('contact_btn_title'); ?></a>
+                <a href="<?php echo get_theme_mod('contact_btn'); ?>" class="main-cta"><?php echo get_theme_mod('contact_btn_title'); ?></a>
             </div>
             <!-- /.container -->
         </section>
