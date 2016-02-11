@@ -201,7 +201,7 @@ _menus.scss
             li{
                 a{
                     text-decoration: none;
-                    background:url('../paraglidenorthamerica/images/bg_bg2.png') repeat-y;
+                    background:url('images/bg_bg2.png') repeat-y;
                     background-size:100%;
                     background-position:-1000px 0;
                     border-radius: 0px !important;
@@ -332,7 +332,7 @@ header {
                 line-height: 1.5;
                 transition: all 250ms ease-in-out;
                 text-decoration: none;
-
+                background:none;
                 &:hover {
                     color: white;
                     text-decoration: none;
@@ -388,7 +388,19 @@ header {
         background-color: transparentize(black, 0.3);
         padding: 24px;
         text-align: center;
+        .inside-social{
+            background-color:white;
+            padding:1em;
+            ul{
+                list-style: none;
+                margin:0;
+                padding:0;
+            }
+        }
     }
+}
+#center{
+    display:none;
 }
 
 // pilot-service
@@ -436,6 +448,7 @@ header {
 }
 
 // latest videos
+#thumbwrapper1{padding:0;}
 
 .latest-videos {
     text-align: center;

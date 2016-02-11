@@ -236,10 +236,27 @@ $wp_customize->add_section('theme_about', array(
       'settings' => 'about_section_image'
    ) ));
 
- 
 
 
-   
+   /*=========================Events SECTION========================*/
+   $wp_customize->add_section('social_media', array(
+      'title' => _('Event Section'),
+      'priority' => '2',
+      'active_callback' => 'is_front_page'
+    ));
+   $wp_customize->add_setting('events_info_background', array(
+      'default'=> '',
+      ));
+   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'events_info_background', array(
+      'label' => _('Edit Events Image'),
+      'section' => 'social_media',
+      'settings' => 'events_info_background'
+   ) ));
+
+
+
+
+
    /*=========================Shop SECTION========================*/
   $wp_customize->add_section('theme_shop', array(
     'title' => _('Shop Section'),
@@ -630,12 +647,18 @@ function customtheme_css_customize(){
 	 background-attachment: fixed;
 	}
 	
+  /* .events-info {
+    background-image: url("<?php echo get_theme_mod('events_info_background'); ?>");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  } */
+
 	.pilot-service {
 		background-image: url("<?php echo get_theme_mod('shop_tagline_background'); ?>");
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
-
 	}
 
 	.latest-videos{

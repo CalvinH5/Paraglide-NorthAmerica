@@ -60,7 +60,7 @@ get_header(); ?>
         <section class="events-info">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="feed-plugin">
                             <h4>Follow Us</h4>
                             <div class="inside-social">
@@ -72,26 +72,42 @@ get_header(); ?>
                         <!-- /.feed-plugin -->
                     </div> 
                     <!-- /.col-md-3 -->
-
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="feed-plugin">
-                            <h4>Follow Us</h4>
+                            <h4>Xcontest</h4>
+                            <div class="inside-social">
+                            
+                                <?php echo do_shortcode("[wp-rss-aggregator source=1769 limit=5]");?>
+                            </div>
+                            <!-- /.inside-social -->
+                            
                         </div>
                         <!-- /.feed-plugin -->
                     </div> 
                     <!-- /.col-md-3 -->
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="feed-plugin">
-                            <h4>Follow Us</h4>
+                            <h4>Leonardo</h4>
+                            <div class="inside-social">
+
+                                <?php echo do_shortcode("[wp-rss-aggregator source=1775 limit=5]");?>
+                            </div>
                         </div>
                         <!-- /.feed-plugin -->
                     </div> 
                     <!-- /.col-md-3 -->
 
-                    <div class="col-md-3">
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-12">
                         <div class="feed-plugin">
                             <h4>Follow Us</h4>
+                            <div class="inside-social">
+                                <iframe frameborder="0" height="990" id="main_frame" name="main_frame_name" scrolling="no" src="http://pwca.org/event/newCurrentEventIframe.html" style="border: 0px currentColor;" width="100%"></iframe>
+                            </div>
+                            <!-- /.inside-social -->
                         </div>
                         <!-- /.feed-plugin -->
                     </div> 
