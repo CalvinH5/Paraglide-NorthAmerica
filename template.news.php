@@ -4,7 +4,8 @@
  */
 
 get_header(); ?>
-
+    <div class="black-bar"></div>
+    <!-- /.black-bar -->
     <div class="news">
         <div class="container">
             <div class="row">

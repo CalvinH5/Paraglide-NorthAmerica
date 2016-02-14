@@ -16,6 +16,8 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="black-bar"></div>
+			<!-- /.black-bar -->
 
 			<?php
 			while ( have_posts() ) : the_post();
