@@ -9,9 +9,9 @@ get_header(); ?>
     <div class="news">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
 
-                    <?php query_posts('cat=2'); ?> 
+                    <?php query_posts('cat=0'); ?> 
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
                        <!-- <?php the_excerpt(); ?>
