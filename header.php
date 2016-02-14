@@ -42,19 +42,19 @@
 		
 		
 
-			 <video  loop autoplay="true" poster="<?php bloginfo('template_directory'); ?>/images/paraglide-bg.jpg">
-                    <source src="<?php bloginfo('template_directory'); ?>/pna-clip.mp4"  type="video/mp4">
-                    
-            </video>
-
-            <div class="video-text">
-                <div class="container">
-                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                   <span class="icon-pulldown"><i class="ion-chevron-down"></i></span>
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /.video-dark-overlay -->
+			 <!-- <video  loop autoplay="true" poster="<?php bloginfo('template_directory'); ?>/images/paraglide-bg.jpg">
+			                     <source src="<?php bloginfo('template_directory'); ?>/pna-clip.mp4"  type="video/mp4">
+			                     
+			             </video>
+			 
+			             <div class="video-text">
+			                 <div class="container">
+			                     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			                    <span class="icon-pulldown"><i class="ion-chevron-down"></i></span>
+			                 </div>
+			                 /.container
+			             </div>
+			             /.video-dark-overlay -->
 
 
 

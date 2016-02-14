@@ -178,7 +178,7 @@ _menus.scss
 }
 .active3{right:0.5em !important;top:5px !important;}
 .active{
-    padding-bottom:100px !important;
+    padding-bottom:3em !important;
     background-color:transparentize(black,0.2);
 }
 .is-active{
@@ -194,11 +194,11 @@ _menus.scss
     width:100%;
     z-index: 100;
     margin-top:-460px;
-    padding-bottom:120px; 
+    padding-bottom:5em; 
     @include transition(0.2s);
     .menu,
     .menu-primary-container{
-        //#primary-menu{
+        #primary-menu{
             li{
                 a{
                     text-decoration: none;
@@ -213,7 +213,7 @@ _menus.scss
                 }
             }
         }
-    //}   
+    }   
 }
 .sub-menu,
 .children{
@@ -240,7 +240,6 @@ _menus.scss
         line-height: 100px;
         margin-top:0px;
         padding:0;
-        .menu,
         .menu-primary-container{//.menu-primary-container
             width:960px;
             margin:0 auto;
