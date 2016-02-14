@@ -22,7 +22,9 @@ get_header(); ?>
                      <?php $i = 1; while (have_posts() && $i < 3) : the_post(); ?>
 
                         <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                        <?php the_content(); ?>
+                        <?php the_excerpt(); ?>
+                        <a href="<?php echo get_permalink(); ?>"> Read More...</a>
+
                         <p class="postmetadata"><?php _e( 'Posted in' ); ?> <?php the_category( ', ' ); ?></p>
 
                      <?php $i++; endwhile;  ?>

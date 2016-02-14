@@ -23,7 +23,8 @@
 </div><!-- #page -->
 
 <script type="text/javascript">
-	$(window)
+jQuery(document).ready(function($) {
+    $(window)
 	    .scroll(function(event) {
 	        var yOffset = window.pageYOffset;
 	        var breakpoint = 50;
@@ -45,6 +46,8 @@
 		$(".main-navigation").toggleClass("is-active");
 		$(".pna_logo").toggleClass("is-active2");
 	});
+});
+	
 </script>
 <?php wp_footer(); ?>
 
