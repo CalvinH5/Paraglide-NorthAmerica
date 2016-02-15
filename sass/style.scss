@@ -155,6 +155,7 @@ _menus.scss
           transition: $ease;
 }
 
+// Navigation
 // PNA LOGO
 .pna_logo{
     z-index: 100;
@@ -165,7 +166,15 @@ _menus.scss
 }
 .active5{margin-top:0 !important;}
 .is-active2{opacity: 0.5;}
-// Navigation
+
+.nav-border{
+    position: fixed;
+    border-bottom: white 1px solid;
+    width:100%;
+    padding-bottom:7em;
+    z-index: 100;
+    @include transition(0.5s ease);
+}
 .nav-toggle{
     z-index: 1001;
     font-size: 3em;
@@ -178,7 +187,7 @@ _menus.scss
 }
 .active3{right:0.5em !important;top:5px !important;}
 .active{
-    padding-bottom:3em !important;
+    padding-bottom:4em !important;
     background-color:transparentize(black,0.2);
 }
 .is-active{
@@ -187,14 +196,15 @@ _menus.scss
     @include transition(0.5s ease);
     z-index: 101 !important;
 }
+.is-active3{display:none;}
 .main-navigation{
     position: fixed;
     border-bottom: white 1px solid;
     line-height: 60px;
     width:100%;
     z-index: 100;
-    margin-top:-460px;
-    padding-bottom:5em; 
+    margin-top:-760px;
+    /* padding-bottom:5em; */ 
     @include transition(0.2s);
     .menu,
     .menu-primary-container{
@@ -202,7 +212,7 @@ _menus.scss
             li{
                 a{
                     text-decoration: none;
-                    background:url('images/bg_bg1.png') repeat-y;
+                    background:url('images/bg_bg2.png') repeat-y;
                     background-size:100%;
                     background-position:-1000px 0;
                     border-radius: 0px !important;
@@ -224,6 +234,7 @@ _menus.scss
 }
 /* MEDIA Q */
 @media screen and (min-width : 990px) {
+    .nav-border{display:none;}
     .pna_logo{opacity:1;z-index: 1000;}
     .nav-toggle{display:none;position: absolute;}
     .active{
@@ -275,7 +286,25 @@ _menus.scss
     background-color:black;
     height:100px;
 }
-
+.page-background{
+    height:300px;
+    background-color:#4A90E2;
+}
+.page-layout{
+    margin-top: -100px;
+    /* background-color: #fff; */
+}
+.page-container{
+    overflow: hidden;
+    height:300px;
+}
+.white-box{
+    background-color: white;
+    position: absolute;
+    width:1170px;
+    height:120px;
+    margin-top:13em;
+}
 
 // header
 
@@ -306,7 +335,13 @@ header {
             }
         }
     }
+}
 
+// Video
+
+.video-background{
+    position: relative;
+    overflow: hidden;
     video {
         min-width: 100%;
         min-height: 100%;

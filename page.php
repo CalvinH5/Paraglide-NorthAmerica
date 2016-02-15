@@ -18,7 +18,19 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="black-bar"></div>
 			<!-- /.black-bar -->
-			<div class="container">
+				<div class="page-container">
+				<div class="white-box"></div>
+				<?php
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail();
+					}else{
+						echo "<div class=\"page-background\"></div>";
+					} 
+				?>
+				</div>
+			
+			<!-- /.page-img -->
+			<div class="container page-layout">
 			<!-- /.container -->
 				<?php
 				while ( have_posts() ) : the_post();

@@ -25,7 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'paraglidenorthamerica' ); ?></a>
 	
-
+	
 	<header id="masthead" class="site-header" role="banner">
 
 		<nav id="site-navigation" class="main-navigation" role="navigation"> 
@@ -33,7 +33,8 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			
 		</nav><!-- #site-navigation -->
-
+		<div class="nav-border"></div>
+		<!-- /.nav-border -->
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="pna_logo">
 				<img src="<?php echo get_theme_mod('pna_logo'); ?>" width="<?php echo get_theme_mod('logo_width');?>" height="<?php echo get_theme_mod('logo_height');?>" alt="">
 			</a>

@@ -13,9 +13,10 @@
  */
 
 get_header(); ?>
-    <header>
+
+    <div class="video-background">
         <video  loop autoplay="true" poster="<?php bloginfo('template_directory'); ?>/images/paraglide-bg.jpg">
-                        <source src="<?php bloginfo('template_directory'); ?>/pna-clip.mp4"  type="video/mp4">
+            <source src="<?php bloginfo('template_directory'); ?>/pna-clip.mp4"  type="video/mp4">
                         
         </video>
 
@@ -27,7 +28,8 @@ get_header(); ?>
             <!-- /.container -->
         </div>
         <!-- /.video-dark-overlay -->
-    </header>
+    </div>
+    <!-- /.video-background -->
 
     <div class="news">
         <div class="container">

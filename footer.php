@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<!-- <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'paraglidenorthamerica' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'paraglidenorthamerica' ), 'WordPress' ); ?></a> -->
-			<span class="sep"><?php echo get_theme_mod('copyright_details');?> | </span>
+			<span class="sep">Copyright &copy; <?php echo get_theme_mod('copyright_details');?> | </span>
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'paraglidenorthamerica' ), 'paraglidenorthamerica', '<a href="http://www.paraglidenorthamerica.com" rel="designer">Paraglide NorthAmerica</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
@@ -27,15 +27,17 @@ jQuery(document).ready(function($) {
     $(window)
 	    .scroll(function(event) {
 	        var yOffset = window.pageYOffset;
-	        var breakpoint = 50;
+	        var breakpoint = 1;
 	        if (yOffset > breakpoint) {
 	            $(".main-navigation").addClass('active');
+	            $(".nav-border").addClass('active');
 	            $(".sub-menu").addClass('active2');
 	            $(".sub-menu li").addClass('active4');
 	            $(".nav-toggle").addClass('active3');
 	            $(".pna_logo").addClass('active5');
 	        } else {
 	            $(".main-navigation").removeClass('active');
+	            $(".nav-border").removeClass('active');
 	            $(".sub-menu").removeClass('active2');
 	            $(".sub-menu li").removeClass('active4');
 	            $(".nav-toggle").removeClass('active3');
@@ -45,6 +47,7 @@ jQuery(document).ready(function($) {
 	$(".nav-toggle").click(function(){
 		$(".main-navigation").toggleClass("is-active");
 		$(".pna_logo").toggleClass("is-active2");
+		$(".nav-border").toggleClass("is-active3");
 	});
 });
 	
