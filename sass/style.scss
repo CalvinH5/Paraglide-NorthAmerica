@@ -140,13 +140,7 @@ h4 {
     letter-spacing: 2px;
 
 }
-/* 
-style.scss
-function.php
-header.php
-footer.php
-_menus.scss
- */
+
 //MIXIN
 @mixin transition($ease){
     -webkit-transition: $ease;
